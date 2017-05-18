@@ -5,6 +5,6 @@ class PlaylistsController < ApplicationController
 
   def import
   	Playlist.import(params[:file])
-  	redirect_to root_url, notice: "Playlist Data imported"
+  	redirect_to playlists_url, notice: "Playlist Data imported"
   end	
 end

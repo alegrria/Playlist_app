@@ -1,0 +1,33 @@
+<%= flash[:notice] %>
+<table>
+  <thead>
+  	<tr>
+  	  <th>Title</th>
+      <th>Artist</th>
+      <th>Album</th>
+  	  <th>Track</th>
+  	  <th>Year</th>
+      <th>Genre</th>
+  	</tr>
+  </thead>
+  <tbody>
+  	<% @mp3s.each do |mp3| %>
+  	  <tr>
+  	  	<td><%= mp3.title %></td>
+  	  	<td><%= mp3.interpret %></td>
+  	  	<td><%= mp3.album %></td>
+        <td><%= mp3.track %></td>
+        <td><%= mp3.year %></td>
+        <td><%= mp3.genre %></td>
+  	  </tr>
+  	<% end %>
+  </tbody>
+</table>
+<div>
+
+<h4>Import data</h4>
+  <%= form_tag import_mp3s_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Import CSV" %>
+  <% end %>
+</div>

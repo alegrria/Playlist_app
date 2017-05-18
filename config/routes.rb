@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   end
   
-    resources :mp3 do
+    resources :mp3s do
     collection { post :import }
   end    
 
