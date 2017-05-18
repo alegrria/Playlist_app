@@ -6,6 +6,7 @@
   	  <th>Last Name</th>
   	  <th>Email</th>
   	  <th>Username</th>
+      <th>Playlists</th>
   	</tr>
   </thead>
   <tbody>
@@ -15,6 +16,7 @@
   	  	<td><%= user.last_name %></td>
   	  	<td><%= user.email %></td>
   	  	<td><%= user.user_name %></td>
+        <td><%= user.playlists.map &:name %></td>
   	  </tr>
   	<% end %>
   </tbody>

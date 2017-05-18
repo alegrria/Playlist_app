@@ -12,7 +12,7 @@
   	  <tr>
   	  	<td><%= playlist.user_id %></td>
   	  	<td><%= playlist.name %></td>
-  	  	<td><%= playlist.mp3_ids.split(',').each { |id| Mp3.find(id) rescue nil }.compact.map &:titleize %></td>
+  	  	<td><%= playlist.mp3_ids.split(',').map { |id| Mp3.find(id) rescue nil }.compact.map &:title %></td>
   	  </tr>
   	<% end %>
   </tbody>
