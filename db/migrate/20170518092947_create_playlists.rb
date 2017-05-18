@@ -7,5 +7,6 @@ class CreatePlaylists < ActiveRecord::Migration[5.0]
 
       t.timestamps
     end
+    add_index :playlists, [:user_id]
   end
 end

@@ -5,6 +5,6 @@ class UsersController < ApplicationController
 
   def import
   	User.import(params[:file])
-  	redirect_to root_url, notice: "Activity Data imported!"
+  	redirect_to root_url, notice: "User Data imported"
   end	
 end
