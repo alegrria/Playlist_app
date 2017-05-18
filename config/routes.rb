@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'users/new'
-
- root 'users#new'
+  root 'users#index'
+  resources :users do
+  collection { post :import }
+  end
 end
